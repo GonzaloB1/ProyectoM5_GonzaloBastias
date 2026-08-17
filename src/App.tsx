@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
 import { Catalog } from "./pages/Catalog";
+import { ProductDetail } from "./pages/ProductDetail";
 import { ProtectedRoute } from "./routes/ProtectedRoute";
 import { AdminRoute } from "./routes/AdminRoute";
 
@@ -20,6 +21,14 @@ function App() {
           element={
             <ProtectedRoute>
               <Catalog />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/products/:id"
+          element={
+            <ProtectedRoute>
+              <ProductDetail />
             </ProtectedRoute>
           }
         />
