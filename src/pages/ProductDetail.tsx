@@ -1,9 +1,11 @@
 import { useParams, Link } from "react-router-dom";
 import { useProduct } from "../features/products/hooks/useProduct";
+import { useCart } from "../features/cart/hooks/useCart";
 
 export function ProductDetail() {
   const { id } = useParams();
   const { product, loading, error } = useProduct(id);
+  const { addItem } = useCart();
 
   if (loading) return <p>Cargando producto...</p>;
   if (error) return <p className="error">{error}</p>;
@@ -25,8 +27,8 @@ export function ProductDetail() {
         <p className="out-of-stock">Sin stock</p>
       )}
 
-      <button disabled={product.stock === 0}>
-        Agregar al carrito (Etapa 4)
+      <button onClick={() => addItem(product)} disabled={product.stock === 0}>
+        Agregar al carrito
       </button>
     </div>
   );
