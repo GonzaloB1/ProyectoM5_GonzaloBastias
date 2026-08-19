@@ -6,13 +6,10 @@ import { ProductDetail } from "./pages/ProductDetail";
 import { Cart } from "./pages/Cart";
 import { Checkout } from "./pages/Checkout";
 import { OrderHistory } from "./pages/OrderHistory";
+import { AdminProducts } from "./features/admin/pages/AdminProducts";
 import { ProtectedRoute } from "./routes/ProtectedRoute";
 import { AdminRoute } from "./routes/AdminRoute";
 import { Header } from "./components/Header";
-
-function AdminPanel() {
-  return <h1>Panel Admin (placeholder — Etapa 6)</h1>;
-}
 
 function App() {
   return (
@@ -26,7 +23,7 @@ function App() {
         <Route path="/cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
         <Route path="/checkout" element={<ProtectedRoute><Checkout /></ProtectedRoute>} />
         <Route path="/orders" element={<ProtectedRoute><OrderHistory /></ProtectedRoute>} />
-        <Route path="/admin" element={<AdminRoute><AdminPanel /></AdminRoute>} />
+        <Route path="/admin" element={<AdminRoute><AdminProducts /></AdminRoute>} />
       </Routes>
     </BrowserRouter>
   );
