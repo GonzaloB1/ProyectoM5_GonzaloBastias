@@ -15,7 +15,7 @@ export function ProductDetail() {
     <div>
       <Link to="/">← Volver al catálogo</Link>
 
-      <img src={product.imageUrl} alt={product.name} />
+      <img src={product.imageUrl} alt={product.name} className="product-detail-image"/>
       <h1>{product.name}</h1>
       <p className="price">${product.price.toLocaleString()}</p>
       <p>{product.description}</p>

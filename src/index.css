@@ -89,7 +89,7 @@ textarea { min-height: 80px; resize: vertical; }
   margin: 0.5rem 0;
 }
 
-/* ---------- Header ---------- */
+
 header {
   display: flex;
   flex-wrap: wrap;
@@ -111,12 +111,12 @@ header a:first-child {
 }
 header button { margin-left: auto; }
 
-/* ---------- Contenedor general de páginas ---------- */
+
 main, .page, form, table { width: 100%; }
 body > #root > * { padding: 1.25rem; max-width: 1100px; margin: 0 auto; width: 100%; }
 header { max-width: 100%; }
 
-/* ---------- Catálogo / grilla de productos ---------- */
+
 .product-filter, .order-status-filter {
   display: flex;
   gap: 0.5rem;
@@ -149,13 +149,25 @@ header { max-width: 100%; }
   overflow: hidden;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
+.product-detail-image {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  display: block;
+  margin: 0 auto 1rem;
+}
+/* */
 .product-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-soft); text-decoration: none; }
 .product-card img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: var(--color-bg); }
 .product-card h3 { font-size: 0.9rem; padding: 0.6rem 0.7rem 0; }
 .product-card .price { padding: 0 0.7rem 0.7rem; color: var(--color-accent); font-weight: 700; }
 .out-of-stock { color: var(--color-error); font-size: 0.78rem; padding: 0 0.7rem 0.6rem; display: block; }
 
-/* ---------- Carrito / checkout ---------- */
+
 ul { list-style: none; }
 li {
   display: flex;
@@ -177,7 +189,7 @@ li input[type="number"] { width: 60px; }
   margin: 1rem 0;
 }
 
-/* ---------- Formularios (login, register, admin) ---------- */
+
 form {
   display: flex;
   flex-direction: column;
@@ -198,7 +210,7 @@ form button[type="submit"] {
 }
 form button[type="submit"]:hover:not(:disabled) { background-color: var(--color-primary-hover); }
 
-/* ---------- Tablas (admin) ---------- */
+
 table {
   border-collapse: collapse;
   background-color: var(--color-surface);
@@ -213,7 +225,7 @@ th { color: var(--color-text-muted); font-weight: 600; font-size: 0.78rem; text-
 tr:last-child td { border-bottom: none; }
 td img { width: 40px; height: 40px; object-fit: cover; border-radius: 6px; }
 
-/* ---------- Estados de orden ---------- */
+
 .status-badge {
   display: inline-block;
   padding: 0.25rem 0.65rem;

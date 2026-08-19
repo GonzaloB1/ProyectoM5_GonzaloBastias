@@ -11,13 +11,19 @@ export function Header() {
     <header>
       <Link to="/">Catálogo</Link>
 
-      <Link to="/orders">Mis órdenes</Link>
-
+      {firebaseUser && <Link to="/orders">Mis órdenes</Link>}
       {role === "admin" && <Link to="/admin/products">Panel Admin</Link>}
 
       <Link to="/cart">Carrito ({itemCount})</Link>
 
-      {firebaseUser && <button onClick={() => logout()}>Cerrar sesión</button>}
+      {firebaseUser ? (
+        <button onClick={() => logout()}>Cerrar sesión</button>
+      ) : (
+        <>
+          <Link to="/login">Iniciar sesión</Link>
+          <Link to="/register">Registrarse</Link>
+        </>
+      )}
     </header>
   );
 }
