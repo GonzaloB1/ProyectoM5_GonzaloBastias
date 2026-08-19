@@ -7,6 +7,8 @@ import { Cart } from "./pages/Cart";
 import { Checkout } from "./pages/Checkout";
 import { OrderHistory } from "./pages/OrderHistory";
 import { AdminProducts } from "./features/admin/pages/AdminProducts";
+import { AdminOrders } from "./features/admin/pages/AdminOrders";
+import { AdminLayout } from "./features/admin/components/AdminLayout";
 import { ProtectedRoute } from "./routes/ProtectedRoute";
 import { AdminRoute } from "./routes/AdminRoute";
 import { Header } from "./components/Header";
@@ -23,7 +25,11 @@ function App() {
         <Route path="/cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
         <Route path="/checkout" element={<ProtectedRoute><Checkout /></ProtectedRoute>} />
         <Route path="/orders" element={<ProtectedRoute><OrderHistory /></ProtectedRoute>} />
-        <Route path="/admin" element={<AdminRoute><AdminProducts /></AdminRoute>} />
+
+        <Route path="/admin" element={<AdminRoute><AdminLayout /></AdminRoute>}>
+          <Route path="products" element={<AdminProducts />} />
+          <Route path="orders" element={<AdminOrders />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
