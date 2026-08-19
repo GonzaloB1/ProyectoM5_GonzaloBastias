@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { deleteProduct } from "../../products/services/productService";
-import { ProductForm } from "./ProductForm";
-import type { Product } from "../../products/types/product";
+import { ProductForm } from "./ProductsForm";
+import type { Product } from "../../products/types/products";
 
 export function ProductRow({ product }: { product: Product }) {
   const [editing, setEditing] = useState(false);

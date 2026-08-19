@@ -2,7 +2,7 @@ import { useState, type FormEvent } from "react";
 import { createProduct, updateProduct } from "../../products/services/productService";
 import { uploadProductImage } from "../services/uploadService";
 import type { Product } from "../../products/types/product";
-import type { ProductFormData } from "../types/productForm";
+import type { ProductFormData } from "../types/productsForm";
 
 interface ProductFormProps {
   existingProduct?: Product;
