@@ -11,7 +11,9 @@ export function Header() {
     <header>
       <Link to="/">Catálogo</Link>
 
-      {role === "admin" && <Link to="/admin">Panel Admin</Link>}
+      <Link to="/orders">Mis órdenes</Link>
+
+      {role === "admin" && <Link to="/admin/products">Panel Admin</Link>}
 
       <Link to="/cart">Carrito ({itemCount})</Link>
 
