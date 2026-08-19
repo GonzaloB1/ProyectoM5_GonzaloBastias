@@ -2,7 +2,7 @@ import { useState, type FormEvent } from "react";
 import { createProduct, updateProduct } from "../../products/services/productService";
 import { uploadProductImage } from "../services/uploadService";
 import type { Product } from "../../products/types/product";
-import type { ProductFormData } from "../types/productsForm";
+import type { ProductFormData } from "../types/productForm";
 
 interface ProductFormProps {
   existingProduct?: Product;
@@ -10,6 +10,13 @@ interface ProductFormProps {
 }
 
 const CATEGORIES = ["electronics", "clothing", "home", "sports"];
+
+const CATEGORY_LABELS: Record<string, string> = {
+  electronics: "Electrónica",
+  clothing: "Ropa",
+  home: "Hogar",
+  sports: "Deportes",
+};
 
 export function ProductForm({ existingProduct, onSuccess }: ProductFormProps) {
   const [formData, setFormData] = useState<ProductFormData>({
@@ -103,7 +110,7 @@ export function ProductForm({ existingProduct, onSuccess }: ProductFormProps) {
         onChange={(e) => handleChange("category", e.target.value)}
       >
         {CATEGORIES.map((cat) => (
-          <option key={cat} value={cat}>{cat}</option>
+          <option key={cat} value={cat}>{CATEGORY_LABELS[cat]}</option>
         ))}
       </select>
 

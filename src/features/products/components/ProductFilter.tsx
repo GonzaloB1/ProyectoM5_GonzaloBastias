@@ -1,5 +1,12 @@
 const CATEGORIES = ["electronics", "clothing", "home", "sports"];
 
+const CATEGORY_LABELS: Record<string, string> = {
+  electronics: "Electrónica",
+  clothing: "Ropa",
+  home: "Hogar",
+  sports: "Deportes",
+};
+
 interface ProductFilterProps {
   selected: string | null;
   onSelect: (category: string | null) => void;
@@ -20,7 +27,7 @@ export function ProductFilter({ selected, onSelect }: ProductFilterProps) {
           className={selected === category ? "active" : ""}
           onClick={() => onSelect(category)}
         >
-          {category}
+          {CATEGORY_LABELS[category]}
         </button>
       ))}
     </div>

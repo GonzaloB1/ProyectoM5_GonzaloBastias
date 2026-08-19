@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { subscribeToAllProducts } from "../../products/services/productService";
-import { ProductForm } from "../components/ProductsForm";
+import { ProductForm } from "../components/ProductForm";
 import { ProductRow } from "../components/ProductRow";
 import type { Product } from "../../products/types/product";
 

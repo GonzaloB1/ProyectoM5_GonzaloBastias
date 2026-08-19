@@ -4,6 +4,13 @@ import type { OrderStatus } from "../../orders/types/order";
 
 const STATUSES: OrderStatus[] = ["pending", "processing", "completed", "cancelled"];
 
+const STATUS_LABELS: Record<OrderStatus, string> = {
+  pending: "Pendiente",
+  processing: "En proceso",
+  completed: "Completada",
+  cancelled: "Cancelada",
+};
+
 interface OrderStatusSelectProps {
   orderId: string;
   currentStatus: OrderStatus;
@@ -31,7 +38,7 @@ export function OrderStatusSelect({ orderId, currentStatus }: OrderStatusSelectP
       disabled={updating}
     >
       {STATUSES.map((status) => (
-        <option key={status} value={status}>{status}</option>
+        <option key={status} value={status}>{STATUS_LABELS[status]}</option>
       ))}
     </select>
   );
