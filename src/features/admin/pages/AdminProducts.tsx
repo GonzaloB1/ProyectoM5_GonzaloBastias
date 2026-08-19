@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { subscribeToAllProducts } from "../../products/services/productService";
 import { ProductForm } from "../components/ProductsForm";
-import { ProductRow } from "../components/ProductsRow";
+import { ProductRow } from "../components/ProductRow";
 import type { Product } from "../../products/types/product";
 
 export function AdminProducts() {
