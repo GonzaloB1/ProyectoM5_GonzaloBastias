@@ -20,8 +20,8 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/" element={<ProtectedRoute><Catalog />
-        <Route path="/products/:id" element={<ProtectedRoute><ProductDetail />
+        <Route path="/" element={<Catalog />} />
+        <Route path="/products/:id" element={<ProductDetail />} />
         <Route path="/cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
         <Route path="/checkout" element={<ProtectedRoute><Checkout /></ProtectedRoute>} />
         <Route path="/orders" element={<ProtectedRoute><OrderHistory /></ProtectedRoute>} />
