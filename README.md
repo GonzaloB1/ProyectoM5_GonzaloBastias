@@ -1,6 +1,6 @@
-# AI Driven E-Commerce
+# AI Driven commerce-platform
 
-SPA de e-commerce con dos roles de usuario (customer/admin), autenticación con Firebase, catálogo con filtros y búsqueda, carrito con Context API + useReducer, checkout con órdenes persistidas, panel de administración con upload de imágenes a AWS S3 vía presigned URLs, y testing con Vitest + React Testing Library. Proyecto Integrador 5 — Henry, especialización Frontend.
+SPA de commerce-platform con dos roles de usuario (customer/admin), autenticación con Firebase, catálogo con filtros y búsqueda, carrito con Context API + useReducer, checkout con órdenes persistidas, panel de administración con upload de imágenes a AWS S3 vía presigned URLs, y testing con Vitest + React Testing Library. Proyecto Integrador 5 — Henry, especialización Frontend.
 
 **Demo en vivo:** https://ai-ecommerce-sigma.vercel.app
 
